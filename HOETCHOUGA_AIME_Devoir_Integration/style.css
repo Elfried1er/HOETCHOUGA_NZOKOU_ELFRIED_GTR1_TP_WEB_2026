@@ -1,0 +1,136 @@
+.container{
+    display: flex;
+}
+main{
+    padding: 20px;
+    flex: 1;
+}
+footer{
+    background-color: rgb(216, 228, 230);
+    margin: 5px 0px;
+}
+header{
+    background-image: url(./Image/site\ 2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: azure;
+}
+body{
+    font-family: Arial, sans-serif;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color:rgb(232, 247, 247);
+}
+.center{
+    text-align: center;
+}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+nav a{
+    color: aqua;
+    margin: 0 7px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: blueviolet;
+}
+img{
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+aside{
+    flex: 1;
+    padding: 20px;
+}
+.title1{
+    text-align: center;
+}
+.paragraphe1{
+    text-align: center;
+    font-size: 25px;
+}
+.domaine{
+    padding: 50px 8%;
+}
+.section{
+    padding: 50px;
+    background-color: aliceblue;
+}
+.classes{
+    justify-content: space-around;
+    width: 100%;
+    display: flex;
+}
+.classe h3{
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+.classe ul{
+    padding: 0px;
+}
+.classe a{
+    text-decoration: none;
+}
+.logo{
+    justify-content: left;
+}
+button{
+    background-color: blue;
+}
+.fin{
+    text-align: center;
+}
+@media ( max-width : 480px) {
+    .page {
+        width: 100%;
+    }
+    body {
+        background-color: white;
+    }
+    header{
+        border-radius: 0;
+    }
+    main{
+        border-radius: 0;
+        padding: 12px;
+    }
+    aside{
+        border-radius: 0;
+        padding: 12px;
+    }
+    nav a {
+        font-size: 14px;
+    }
+    footer{
+        font-size: 14px;
+    }
+}
+@media ( max-width: 768px ){
+    .container{
+        flex-direction: column;
+    }
+    nav{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    header{
+        padding: 15px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    p{
+        font-size: 15px;
+    }
+}
