@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Acceuil-Mon MIni-Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+ <header>
+        <h1> Mon Mini-site </h1>
+    </header>
+    <nav>
+        <a href="index.html"> Acceuil</a>
+        <a href="presentation.html"> presentation </a>
+        <a href="contact.html"> Contact </a>
+    </nav>
+    <div class="container">
+        <main>
+            <section class="carte">
+            <div class="carte">
+                <h2> Bienvenue </h2>
+                 <h2> Message dynamique avec JavaScript </h2>
+            <p> Cette zone permet d'afficher un message personnalisé selon le nom et le domaine choisi. </p>
+            <label for="nomUtilisateur"> Entrez votre nom : </label>
+            <input type="text" id="nomUtilisateur" placeholder="Exemple : Elfried">
+            <label for="domaineUtilisateur"> choisissez votre domaine d'intérêt :</label>
+            <select id="domaineUtilisateur">
+                <option value="">Choisir un domaine</option>
+                <option value="reseaux informatiques">Réseaux informatiques</option>
+                <option value="cybersecurite">cybersécurité</option>
+                <option value="developpement web">Développement Web</option>
+                <option value="administration systeme">Administration système</option>
+            </select>
+            <button onclick="afficherMessage()">Afficher le message</button>
+           
+            <p id="messageResultat"></p>
+            </div>
+            </section>
+        </main>
+        <aside>
+            <h2> Informations </h2>
+            <p> Cette zone peut contenir des informations supplementaires </p>
+        </aside>
+    </div>
+    <footer>
+        <p>¤ 2026 - Mon mini-site</p>
+    </footer>
+    </div>
+<script>
+    function afficherMessage(){
+        let nom=document.getElementById("nomUtilisateur").value;
+        let domaine=document.getElementById("domaineUtilisateur").value;
+        let message="";
+        if(nom==="" && domaine===""){
+            message=" Veillez saisir votre nom et votre domaine d'intérêt.";
+        }
+        else if(nom===""){  
+        message="Veillez saisir votre nom.";
+        }
+        else if(domaine===""){
+        message="Veillez choisir votre domaine d'intérêt";
+        }
+        else{
+        message= " Bienvenue "+nom+". votre domaine d'intérêt est :"+domaine+".";
+        }      
+        document.getElementById("messageResultat").textContent=message;
+    }
+    
+    </script>
+</body>
+</html>
