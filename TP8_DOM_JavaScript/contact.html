@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Contact mon mini-site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+    <header>
+    <h1> Page de contact </h1>
+    </header>
+    <nav>
+        <a href="index.html"> Acceuil </a>
+        <a href="presentation.html"> Presentation </a>
+        <a href="contact.html"> Contact </a>
+    </nav>
+    <h2> Formulaire de Contact </h2>
+    <p> Veillez remplir ce formulaire pour envoyer un message.</p>
+
+        <!-- placeholder et required -->
+         <div class="container">
+         <main>
+            <header>
+    <form>
+        <label for="nom"> Nom : </label>
+        <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required><br>
+        <br>
+        <label for="Prenom"> Prenom :</label>
+        <input type="text" id="Prenom" name="Prenom" placeholder="Entrez votre Prenom" required><br>
+        <br>
+        <label for="email"> Adresse email : </label>
+        <input type="email" id="email" name="email" placeholder="exemple@gmail.com" required><br>
+        <br>
+        <label for="telephone"> Telephone : </label>
+        <input type="tel" id="telephone" name="telephone" placeholder="+237 6XX XXX XXX"><br>
+        <br>
+
+        <label for="domaine"> Domaine dinteret </label>
+      <select name="domaine" id="domaine">
+        <option value=""> choisir un domaine </option>
+        <option value="reseaux"> reseaux informatique </option>
+        <option value="cyber"> cybersecurite </option>
+        <option value="developpement web"> Developpement Web</option>
+        <option value="administration systeme"> Administration Systeme </option>
+      </select>
+      <br>
+      <br>
+        <label for="motif"> Motif du message :</label>
+
+        <!-- ajout liste deroulante -->
+
+      <select name="motif" id="motif" required>
+           <option value=""> choisir un motif </option>
+           <option value="information"> demande dinformation </option>
+           <option value="Stage"> Demande de Stage </option>
+           <option value="Projet"> Proposition de Projet </option>
+           <option value="Autres"> Autre demande </option>
+      </select>
+      <br>
+      <br>
+      </header>
+          </main>
+         <!-- ajout de bouton radio -->
+          <aside>
+         <p> statut du visiteur : </p>
+         <input type="radio" id="etudiant" name="statut" value="etudiant" required>
+         <label for="etudiant"> Etudiant </label><br>
+         <input type="radio" id="enseignant" name="statut" value="enseignant">
+         <label for="enseignant"> Enseignant </label><br>
+         <input type="radio" id="professionnel" name="statut" value="professionnel">
+         <label for="professionnel"> Professionnel </label><br>
+         <br>
+         </aside>
+         </div>
+         <!-- ajout dune case a cocher -->
+
+         <label for="message"> Message</label><br>
+          <textarea name="messge" id="message" rows="5" cols="40" placeholder="Ecrivez votre message ici" required></textarea><br>
+          <br>
+         <input type="checkbox" id="confirmation" name="confirmation" required>
+         <label for="confirmation"> Je confirme que les informations saisies sont correctes</label><br>
+         <br>
+        <button type="submit"> Envoyer </button>
+        <button type="reset"> Effacer </button>
+    </form>
+    <footer>
+        Plus d'informations
+    </footer>
+    </div>
+</body>
+</html>
